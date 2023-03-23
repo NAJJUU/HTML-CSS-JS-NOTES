@@ -1,0 +1,43 @@
+1. 구성
+    1) 선택자{속성: 값;}
+        -선택자: 스타일(CSS)을 적용할 대상(Selector)
+        -속성: 스타일(CSS)의 종류(Property)
+
+2. CSS 선언 방식
+    -내장 방식
+        -<style></style>의 내용(Content)
+    -링크 방식
+        -<link />로 외부 CSS 문서를 가져와서 연결하는 방식 
+    -인라인 방식
+        -요소의 style 속성에 직접 스타일을 작성하는 방식
+    -@import 방식 
+        -@import 규칙으로 CSS 문서 안에서 또 다른 CSS 문서를 가져와 연결하는 방식 
+
+3. CSS 선택자
+    1) 기본 
+    2) 복합
+    3) 가상 클래스
+    4) 가상 요소 
+    5) 속성
+
+4. 기본 선택자
+    1) 전체 선택자(Universal Selector)
+        -*
+        -모든 요소를 선택 
+    2) 태그 선택자(Type Selector)
+        -ABC
+        -태그 이름이 ABC인 요소 선택
+    3) 클래스 선택자(Class Selector)
+        -.ABC
+        -HTML class 속성의 값이 ABC인 요소 선택 
+    4) 아이디 선택자(ID Selector)
+        -#ABC
+        -HTML id 속성의 값이 ABC인 요소 선택 
+    
+5. 복합선택자
+    1) 일치선택자(Basic Combinator)
+        -ABCXYZ
+        -선택자 ABC와 XYZ를 동시에 만족하는 요소 선택
+    2) 자식선택자(Child Combinator)
+        -ABC>XYZ
+        -선택자 ABC의 자식 요소 XYZ 선택 
