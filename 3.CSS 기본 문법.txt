@@ -41,3 +41,37 @@
     2) 자식선택자(Child Combinator)
         -ABC>XYZ
         -선택자 ABC의 자식 요소 XYZ 선택 
+    3) 하위(후손)선택자(Descendant Combinator)
+        -ABC XYZ
+        -선택자 ABC의 하위 요소 XYZ 선택
+        -'띄어쓰기'가 선택자의 기호
+    4) 인접 형제 선택자(Adjacent Slibng Combinator)
+        -ABC + XYZ
+        -선택자 ABC의 다음 형제 요소 XYZ 하나를 선택 
+    5) 일반 형제 선택자(General Slibing Combinator)
+        -ABC~XYZ 
+        -선택자 ABC의 다음 형제 요소 XYZ 모두를 선택
+
+6. 가상 클래스 선택자(Psuedo-Class)
+    1) HOVER
+        -ABC:hover 
+        -선택자 ABC 요소에 마우스 커서가 올라가 있는 동안 선택
+    2) ACTIVE
+        -ABC:active 
+        -선택자 ABC 요소에 마우스를 클리하고 있는 동안 선택
+    3) FOCUS
+        -ABC:focus 
+        -선택자 ABC 요소에 포커스되면 선택
+    4) FIRST-CHILD 
+        -ABC:first-child 
+        -선택자 ABC가 형제 요소 중 첫째라면 선택
+    5) LAST-CHILD 
+        -ABC:last-child 
+        -선택자 ABC가 형제 요소 중 막내라면 선택
+    6) NTH-CHILD 
+        -ABC:nth-child(n)
+        -선택자 ABC가 형제 요소 중 (n)번째라면 선택
+    7) NTH-CHILD
+        -ABC:nth-child(2n)
+        -선택자 ABC가 형제 요소 중 (n번째라면 선택)
+        -n은 0부터 시작(Zero-Based Numbering)
