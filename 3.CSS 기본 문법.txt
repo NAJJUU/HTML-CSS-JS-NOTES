@@ -75,3 +75,62 @@
         -ABC:nth-child(2n)
         -선택자 ABC가 형제 요소 중 (n번째라면 선택)
         -n은 0부터 시작(Zero-Based Numbering)
+    8) NTH-CHILD
+        -ABC:nth-child(2n+1)
+        -선택자 ABC가 형제 요소 중 (n)번째라면 선택
+        -n은 0부터 시작(Zero-Based Numbering)
+    9) NTH-CHILD
+        -ABC:nth-child(n+2)
+        -선택자 ABC가 형제 요소 중 (n)번째라면 선택
+        -n은 0부터 시작(Zero-Based Numbering)
+    10) 부정 선택자(NOT)
+        -ABC:not(XYZ)
+        -선택자 XYZ가 아닌 ABC요소 선택
+
+7. 가상 요소 선택자(Pseudo-Elements)
+    1) ABC::before
+        -::before: 인라인(글자)요소 
+        -선택자 ABC요소의 내부 앞에 내용(content)을 삽입
+    2) ABC::after
+        -인라인(글자)요소
+        -선택자 ABC 요소의 내부 뒤에 내용(content)을 삽입
+8. 속성 선택자(Attribute)
+    1) [ABC]
+        -속성 ABC를 포함한 요소 선택
+    2) [ABC="XYZ"]
+        -속성 ABC를 포함하고 값이 XYZ인 요소를 선택 
+
+9. 스타일 상속
+    1) 상속되는 CSS 속성들
+        -모두 글자/문자 관련 속성들
+        -모든 글자/문자 속성은 아님
+        -font-style(글자 기울기)
+         font-weight(글자 두께)
+         font-size(글자 크기)
+         line-height(줄 높이)
+         font-family(폰트 서체)
+         color(글자 색상)
+         text-aline(정렬)
+         ... 
+
+10. 선택자 우선순위
+    1) 우선순위
+        -같은 요소가 여러 선언의 대상이 된 경우 어떤 선언의 CSS 속성을 우선 적용할지 결정하는 방법
+            -점수가 높은 선언이 우선함
+                -점수
+                    1. !important: 무한대로 제일 높음
+                    2. 인라인 선언(태그 자체에 입힌 style): 1000점
+                    3. ID 선택자: 100점
+                    4. Class 선택자: 10점 
+                    5. 태그 선택자: 1점
+                    6. 전체 선택자: 0점 
+                    7. 상속은 점수 없음
+            -점수가 같으면, 가장 마지막에 해석된 선언이 우선함 
+    2) .list li.item{color:red;}
+        =>10점+1점+10점=21점
+       .list li:hover{color:red;}
+        =>10점+1점+10점=21점
+       .box::before{color:red;}
+        =>10점+1점=11점
+       #submit span{color:red;}
+        =>100점+1점=101점 
